@@ -37,7 +37,8 @@
     ],
     "require": {
         "php": "^8.0",
-        "illuminate/support": "^9.0|^10.0|^11.0"
+        "illuminate/support": "^9.0|^10.0|^11.0",
+        "illuminate/auth": "^9.0|^10.0|^11.0"
     },
     "extra": {
         "laravel":{
@@ -54,5 +55,5 @@
             "@php artisan vendor:publish --provider=\"Itpathsolutions\\Authinfo\\QueryLoggerServiceProvider\" --tag=config"
         ]
     },
-    "version": "1.0.1"
+    "version": "1.0.2"
 }

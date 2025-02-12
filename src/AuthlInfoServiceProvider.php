@@ -16,10 +16,12 @@
         public function boot()
         {
             Event::listen(Login::class, function ($event) {
-                LoginLog::create([
-                    'user_id' => $event->user->id,
-                    'ip_address' => Request::ip(),
-                ]);
+                if (class_exists(LoginLog::class)) {
+                    LoginLog::create([
+                        'user_id' => $event->user->id,
+                        'ip_address' => Request::ip(),
+                    ]);
+                }
             });
 
             $this->mergeConfigFrom(
