@@ -1,6 +1,6 @@
-# 🛠️ User Login Tracker  
+# 🛠️ Authinfo - User Login Tracker  
 
-The **User Login Tracker** package provides a lightweight solution for logging user login activities within your Laravel application. It records successful login attempts by storing the user's ID and IP address in the database, offering basic insights into authentication activities. 
+The **authinfo** package provides a lightweight solution for logging user login activities within your Laravel application. It records successful login attempts by storing the user's ID and IP address in the database, offering basic insights into authentication activities. 
 
 <p>🏷️  
 <a href="https://packagist.org/search/?tags=authentication">#Authentication</a>&nbsp;  
@@ -22,7 +22,7 @@ The **User Login Tracker** package provides a lightweight solution for logging u
     - [Commands](#commands)
         - [Vendor Publish](#vendor-publish)
         - [Migrate](#migrate)
-- [Accessing the Login Tracker](#accessing-the-login-tracker)  
+- [Accessing the Plugin](#accessing-the-plugin)  
 
 
 ## **Features:**  
@@ -35,7 +35,7 @@ The **User Login Tracker** package provides a lightweight solution for logging u
 
 ## **Installation**  
 To install the package Open the terminal and run the following command:  
-<pre><code class="language-bash">composer require itpathsolutions/user-login-tracker</code></pre>   
+<pre><code class="language-bash">composer require itpathsolutions/authinfo</code></pre>   
 
 ### **Commands**  
 
@@ -47,7 +47,7 @@ Run the following command to publish the vendor files:
 Run the migration command to set up the necessary database tables:
 <pre><code class="language-bash">php artisan migrate</code></pre>  
 
-### **Accessing the Login Tracker**  
+### **Accessing the Plugin**  
 Once installed, you can check the login activities by manually opening the `login_logs` table in your database.  
 
 There is no built-in route or UI for viewing login records—you need to access the database directly. 
