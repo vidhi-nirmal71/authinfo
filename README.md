@@ -1,22 +1,33 @@
-# 🛠️ User Login Tracker - Monitor & Log User Login Activities in Laravel    
+# 🛠️ User Login Tracker  
 
-The **User Login Tracker** package provides detailed insights into user authentication activities within your Laravel application. It logs successful and failed login attempts, tracks login locations, device details, IP addresses, and timestamps, helping you monitor security and user behavior effectively.  
+The **User Login Tracker** package provides a lightweight solution for logging user login activities within your Laravel application. It records successful login attempts by storing the user's ID and IP address in the database, offering basic insights into authentication activities. 
+
+<p>🏷️  
+<a href="https://packagist.org/search/?tags=authentication">#Authentication</a>&nbsp;  
+<a href="https://packagist.org/search/?tags=security">#Security</a>&nbsp;  
+<a href="https://packagist.org/search/?tags=user-tracking">#UserTracking</a>&nbsp;  
+<a href="https://packagist.org/search/?tags=laravel">#Laravel</a>&nbsp;  
+<a href="https://packagist.org/search/?tags=php">#PHP</a>&nbsp;  
+<a href="https://packagist.org/search/?tags=login-monitoring">#LoginMonitoring</a>&nbsp;  
+<a href="https://packagist.org/search/?tags=security-audit">#SecurityAudit</a>&nbsp;  
+<a href="https://packagist.org/search/?tags=server-monitoring">#ServerMonitoring</a>&nbsp;  
+<a href="https://packagist.org/search/?tags=devops">#DevOps</a>&nbsp;  
+<a href="https://packagist.org/search/?tags=access-control">#AccessControl</a>  
+</p> 
 
 ## Documentation
 - [Features](#features)
 - [Supported Versions](#supported-versions)
 - [Installation](#installation)
     - [Commands](#commands)
-    - [Vendor Publish](#vendor-publish)
-    - [Migrate](#migrate)
+        - [Vendor Publish](#vendor-publish)
+        - [Migrate](#migrate)
 - [Accessing the Login Tracker](#accessing-the-login-tracker)  
 
 
 ## **Features:**  
-- **Track user login activities, including timestamps and IP addresses.**  
-- **Monitor failed login attempts to enhance security.**  
-- **Log user agent details such as device type and browser information.**  
-- **View login history and analyze user authentication patterns.**  
+- **Logs user ID and IP address on each successful login.**  
+- **Stores data in the `login_logs` database table.**  
 
 # **Supported Versions:**  
 - **PHP:** ^8.0  
@@ -39,42 +50,24 @@ Run the migration command to set up the necessary database tables:
 ### **Accessing the Login Tracker**  
 Once installed, you can check the login activities by manually opening the `login_logs` table in your database.  
 
-There is no built-in route or UI for viewing login records—you need to access the database directly.  
+There is no built-in route or UI for viewing login records—you need to access the database directly. 
 
-<p>🏷️  
-<a href="https://packagist.org/search/?tags=authentication">#Authentication</a>&nbsp;  
-<a href="https://packagist.org/search/?tags=security">#Security</a>&nbsp;  
-<a href="https://packagist.org/search/?tags=user-tracking">#UserTracking</a>&nbsp;  
-<a href="https://packagist.org/search/?tags=laravel">#Laravel</a>&nbsp;  
-<a href="https://packagist.org/search/?tags=php">#PHP</a>&nbsp;  
-<a href="https://packagist.org/search/?tags=login-monitoring">#LoginMonitoring</a>&nbsp;  
-<a href="https://packagist.org/search/?tags=security-audit">#SecurityAudit</a>&nbsp;  
-<a href="https://packagist.org/search/?tags=server-monitoring">#ServerMonitoring</a>&nbsp;  
-<a href="https://packagist.org/search/?tags=devops">#DevOps</a>&nbsp;  
-<a href="https://packagist.org/search/?tags=access-control">#AccessControl</a>  
-</p>  
+## **Contributing**  
+We welcome contributions from the community! Feel free to **Fork** the repository and contribute to this module. You can also create a pull request, and we will merge your changes into the main branch. See [CONTRIBUTING](https://github.com/vidhi-nirmal71/authinfo/blob/main/CONTRIBUTING.md) for details.  
 
-## **Contributing**
-We welcome contributions from the community! Feel free to **Fork** the repository and contribute to this module. You can also create a pull request, and we will merge your changes into the main branch. See [CONTRIBUTING](https://github.com/itpathsolutions/user-login-tracker/blob/main/CONTRIBUTING.md) for details.
+## **Security Vulnerabilities**  
+Please review our [Security Policy](https://github.com/vidhi-nirmal71/authinfo/security/policy) on how to report security vulnerabilities.  
 
-## **Changelog**
-Please see [CHANGELOG](https://github.com/itpathsolutions/user-login-tracker/blob/main/CHANGELOG.md) for more information on what has changed recently.
+## **License**  
+This package is open-source and available under the MIT License. See the [LICENSE](https://github.com/vidhi-nirmal71/authinfo/blob/main/LICENSE) file for details.  
 
-## **Security Vulnerabilities**
-Please review our [Security Policy](https://github.com/itpathsolutions/user-login-tracker/security/policy) on how to report security vulnerabilities.
-
-## **License**
-This package is open-source and available under the MIT License. See the [LICENSE](https://github.com/itpathsolutions/user-login-tracker/blob/main/LICENSE) file for details.
-
-## **Testing**
+## **Testing**  
 To test this package, run the following test command:  
+<pre><code class="language-bash">composer test</code></pre>   
 
-<pre><code class="language-bash">composer test</code></pre>  
-
-
-## **Get Support**
-- Feel free to [contact us](https://github.com/itpathsolutions/user-login-tracker/issues) if you have any questions.
-- If you find this project helpful, please give us a ⭐ [Star](https://github.com/itpathsolutions/user-login-tracker/stargazers).
+## **Get Support**  
+- Feel free to [contact us](https://www.itpathsolutions.com/contact-us/) if you have any questions.  
+- If you find this project helpful, please give us a ⭐ [Star](https://packagist.org/packages/itpathsolutions/authinfo). 
 
 ## **You may also find our other useful package:**  
 [MySQL Info Package 🚀](https://packagist.org/packages/itpathsolutions/mysqlinfo)  
