@@ -1,0 +1,58 @@
+{
+    "name": "itpathsolutions/authinfo",
+    "description": "Auth information",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Itpathsolutions\\Authinfo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vidhi Nirmal"
+        }
+    ],
+    "keywords": [
+        "authentication",
+        "authinfo",
+        "user-authentication",
+        "php-auth",
+        "auth-logs",
+        "login-tracking",
+        "auth-monitoring",
+        "php-security",
+        "user-management",
+        "session-management",
+        "auth-debugging",
+        "auth-analytics",
+        "authentication-logs",
+        "failed-login-attempts",
+        "user-access-control",
+        "php-login-system",
+        "login-activity",
+        "secure-authentication",
+        "multi-factor-auth",
+        "oauth-logging"
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^9.0|^10.0|^11.0"
+    },
+    "extra": {
+        "laravel":{
+            "providers":[
+                "Itpathsolutions\\Authinfo\\AuthInfoServiceProvider",
+                "Itpathsolutions\\Authinfo\\QueryLoggerServiceProvider"
+
+            ]
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php artisan vendor:publish --provider=\"Itpathsolutions\\Authinfo\\AuthInfoServiceProvider\" --tag=config",
+            "@php artisan vendor:publish --provider=\"Itpathsolutions\\Authinfo\\QueryLoggerServiceProvider\" --tag=config"
+        ]
+    },
+    "version": "1.0.0"
+}
