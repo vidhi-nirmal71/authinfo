@@ -41,7 +41,7 @@ To install the package Open the terminal and run the following command:
 
 #### **Vendor Publish**  
 Run the following command to publish the vendor files:  
-<pre><code class="language-bash">php artisan vendor:publish</code></pre>  
+<pre><code class="language-bash">php artisan vendor:publish --provider="Itpathsolutions\Authinfo\AuthInfoServiceProvider"</code></pre>  
 
 #### **Migrate**  
 Run the migration command to set up the necessary database tables:

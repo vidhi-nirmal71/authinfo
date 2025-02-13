@@ -9,8 +9,8 @@ return new class extends Migration {
         Schema::create('login_logs', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
+            $table->string('ip_address');
             $table->timestamp('login_time')->useCurrent();
-            $table->string('ip_address', 45);
         });
     }
 

@@ -19,7 +19,7 @@
                 if (class_exists(LoginLog::class)) {
                     LoginLog::create([
                         'user_id' => $event->user->id,
-                        'ip_address' => Request::ip(),
+                        'ip_address' => request()->getClientIp() ?? Request::ip(),
                     ]);
                 }
             });
