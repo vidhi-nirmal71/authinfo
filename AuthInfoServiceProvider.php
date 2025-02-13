@@ -4,8 +4,8 @@
     use Illuminate\Support\Facades\Event;
     use Illuminate\Support\ServiceProvider;
     use Illuminate\Auth\Events\Login;
-    use MyCompany\AuthPackage\Models\LoginLog;
     use Illuminate\Support\Facades\Request;
+    use Itpathsolutions\Authinfo\Models\LoginLog;
 
     class AuthInfoServiceProvider extends ServiceProvider {
         public function register()
@@ -21,6 +21,12 @@
                     'ip_address' => Request::ip(),
                 ]);
             });
+
+            $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
+
+            $this->publishes([
+                __DIR__ . '/database/migrations' => database_path('migrations'),
+            ]);
             
             $this->mergeConfigFrom(
                 __DIR__.'/config/logindetails.php', 'logindetails'
