@@ -25,12 +25,12 @@
             });
 
             $this->mergeConfigFrom(
-                __DIR__.'/config/logindetails.php', 'logindetails'
+                __DIR__.'/Config/logindetails.php', 'logindetails'
             );
             
             $this->publishes([
-                __DIR__.'/config/logindetails.php' => config_path('logindetails.php'),
-            ]);  
+                __DIR__.'/Config/logindetails.php' => config_path('logindetails.php'),
+            ]);
         }
    }
 ?>
