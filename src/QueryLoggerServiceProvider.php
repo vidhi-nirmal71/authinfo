@@ -3,10 +3,8 @@
 namespace Itpathsolutions\Authinfo;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Cache;
-use File;
+use Illuminate\Support\Facades\File;
 
 class QueryLoggerServiceProvider extends ServiceProvider
 {

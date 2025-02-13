@@ -1,6 +1,6 @@
 <?php
 
-namespace MyCompany\AuthPackage\Models;
+namespace Itpathsolutions\Authinfo\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

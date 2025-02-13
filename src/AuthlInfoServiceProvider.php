@@ -4,8 +4,8 @@
     use Illuminate\Support\Facades\Event;
     use Illuminate\Support\ServiceProvider;
     use Illuminate\Auth\Events\Login;
-    use MyCompany\AuthPackage\Models\LoginLog;
     use Illuminate\Support\Facades\Request;
+    use Itpathsolutions\Authinfo\Models\LoginLog;
 
     class AuthInfoServiceProvider extends ServiceProvider {
         public function register()
