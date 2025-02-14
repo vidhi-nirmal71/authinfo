@@ -45,7 +45,7 @@ class AuthDetailsController extends Controller
                 $tbody .= '<td>' . ($log->location ?? '-') . '</td>';
                 $tbody .= '<td>' . $log->login_time . '</td>';
                 $tbody .= '<td>' . ($log->logout_time ?? '-') . '</td>';
-                $tbody .= '<td>' . ($log->error_message ?? '-') . '</td>';
+                // $tbody .= '<td>' . ($log->error_message ?? '-') . '</td>';
                 $tbody .= '</tr>';
             }
         } else {

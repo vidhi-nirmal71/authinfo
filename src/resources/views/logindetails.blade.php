@@ -42,7 +42,7 @@
                                 <th>Location</th>
                                 <th>Login Time</th>
                                 <th>Logout Time</th>
-                                <th>Error Message</th>
+                                {{-- <th>Error Message</th> --}}
                             </tr>
                         </thead>
                         <tbody class="loginLogTableBody" id="loginLogTableBody">
