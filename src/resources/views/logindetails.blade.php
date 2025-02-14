@@ -24,7 +24,7 @@
             <div class="card-header d-flex justify-content-between align-items-center bg-white border-0">
                 <h4 class="mb-0">User Login Logs</h4>
                 <div class="input-group search-input" style="width: 250px;">
-                    <input type="text" name="search" class="form-control" placeholder="Search..." title="Search by Designation" data-url="{{ route('login-logs.search') }}" id="searchInput">
+                    <input type="text" name="search" class="form-control" placeholder="Search..." title="Search by Designation" id="searchInput">
                     <span class="input-group-text"><i class="bi bi-search"></i></span>
                 </div>
             </div>

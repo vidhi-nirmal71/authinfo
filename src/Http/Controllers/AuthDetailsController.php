@@ -41,7 +41,7 @@ class AuthDetailsController extends Controller
                 $tbody .= '<td>' . ($log->user_name ?? 'Guest') . '</td>';
                 $tbody .= '<td>' . $log->ip_address . '</td>';
                 $tbody .= '<td>' . ($log->device_type ?? 'N/A') . '</td>';
-                $tbody .= '<td>' . ($log->user_agent ?? 'N/A') . '</td>';
+                $tbody .= '<td style="max-width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="' . htmlspecialchars($log->user_agent, ENT_QUOTES, 'UTF-8') . '">'. ($log->user_agent ?? 'N/A') . '</td>';
                 $tbody .= '<td>' . ($log->location ?? '-') . '</td>';
                 $tbody .= '<td>' . $log->login_time . '</td>';
                 $tbody .= '<td>' . ($log->logout_time ?? '-') . '</td>';
