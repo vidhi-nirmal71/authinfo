@@ -12,7 +12,9 @@
     class AuthInfoServiceProvider extends ServiceProvider {
         public function register()
         {
-            //
+            $this->mergeConfigFrom(
+                __DIR__.'/Config/logindetails.php', 'logindetails'
+            );
         }
 
         public function boot()
@@ -35,10 +37,11 @@
             // For Logout the user
             Event::listen(Logout::class, function ($event) {
                 if (class_exists(LoginLog::class)) {
-                    LoginLog::where('user_id', $event->user->id)
-                        ->latest()
-                        ->first()
-                        ->update(['logout_time' => now()]);
+                    $user = LoginLog::where('user_id', $event->user->id)->orderBy('login_time', 'desc')->first();
+                    if($user){
+                        $user->logout_time = now();
+                        $user->save();
+                    }
                 }
             });
 
@@ -64,36 +67,46 @@
                 ]);
             });
 
+            $this->loadRoutesFrom(__DIR__.'/routes/web.php');
+
+            $this->loadViewsFrom(__DIR__.'/resources/views', 'authinfo');
+
             $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
 
             $this->publishes([
-                __DIR__ . '/database/migrations' => database_path('migrations'),
-            ]);
+                __DIR__ . '/database/migrations' => database_path('migrations'), // Migrations
+                __DIR__.'/Config/logindetails.php' => config_path('logindetails.php'), // Config file
+            ], 'authinfo-package');
 
-            $this->mergeConfigFrom(
-                __DIR__.'/Config/logindetails.php', 'logindetails'
-            );
-            
             $this->publishes([
-                __DIR__.'/Config/logindetails.php' => config_path('logindetails.php'),
-            ]);
+                __DIR__ . '/database/migrations' => database_path('migrations'),
+            ], 'migrations');
         }
 
         // Get the user location
         function getLocationFromIp($ip) {
+            if ($ip === '127.0.0.1' || filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE) === false) {
+                return 'Localhost or Private Network';
+            }
+
             $url = "http://ip-api.com/json/{$ip}";
             $response = @file_get_contents($url);
+
             if ($response) {
                 $data = json_decode($response, true);
-                return $data['city'] . ', ' . $data['country'] ?? 'Unknown';
+                if (isset($data['city']) && isset($data['country'])) {
+                    return "{$data['city']}, {$data['country']}";
+                }
             }
-            return 'Unknown';
+
+            return 'Unknown Location';
         }
+        
 
         // Get the user device
         function getDeviceType() {
             $agent = strtolower(request()->header('User-Agent'));
-        
+
             if (preg_match('/Mobile|Android|iPhone|iPad|iPod/', $agent)) {
                 return 'Mobile';
             } elseif (preg_match('/Tablet|iPad/', $agent)) {
