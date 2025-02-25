@@ -72,29 +72,29 @@ Once installed, open the following URL in your browser to check the plugin:
 
 This table provides a **searchable, paginated** view of login and logout records, including username, IP address, device type, location, and timestamps.
 
-## **FAQs**
-## Frequently Asked Questions (FAQ)
+## **FAQs**  
+## 📌 **Frequently Asked Questions (FAQ)**  
 
-### 1. What does this package do?  
-This package logs and monitors user login/logout activities, capturing details like user ID, IP address, device type, and timestamps.  
+## ❓ 1. What does this package do?  
+🚀 The **Authinfo** package logs and monitors user **login/logout** activities, capturing crucial details like **user ID, IP address, device type, timestamps**, and more. It provides admins with a **clear audit trail** of authentication events.  
 
-### 2. How do I install the package?  
-You can install it using Composer with:  
-`composer require itpathsolutions/authinfo`  
+## 🛠️ 2. How do I install the package?  
+📦 Installing is simple! Run the following command in your terminal:  
+<pre><code class="language-bash">composer require itpathsolutions/authinfo</code></pre>
 
-### 3. Which Laravel versions are supported?  
-This package supports Laravel 9, 10, and 11 with PHP 8+ compatibility.  
+## 🔄 3. Which Laravel versions are supported?  
+This package supports **Laravel 9, 10, and 11** with **PHP 8+** compatibility.  
 
-### 4. Where are login logs stored?  
-All login and logout events are stored in the `login_logs` table in your database.  
+## 📂 4. Where are login logs stored?  
+All login and logout events are stored in the **`login_logs`** table in your database.  
 
-### 5. How do I view login logs?  
-You can access login logs via the following URL:  
-`localhost:8000/login-logs`  
+## 🔍 5. How do I view login logs?  
+You can access login logs via:  
+👉 `localhost:8000/login-logs`  
 
-### 6. Can I customize the package?  
-Yes, you can publish the package’s configuration and views using:  
-`php artisan vendor:publish --tag=authinfo-config`  
+## ⚙️ 6. Can I customize the package?  
+Yes! Publish the package’s configuration and views using:  
+<pre><code class="language-bash">php artisan vendor:publish --tag=authinfo-config</code></pre>  
 
 
 ## **Contributing**  
