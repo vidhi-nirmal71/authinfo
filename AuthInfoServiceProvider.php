@@ -56,12 +56,12 @@
                 }
 
                 LoginLog::create([
-                    'user_id'      => optional($event->user)->id,
-                    'user_name'      => optional($event->user)->name,
-                    'ip_address'   => request()->ip(),
-                    'user_agent'   => request()->header('User-Agent'),
-                    'device_type'       => $this->getDeviceType(request()->header('User-Agent')),
-                    'location'    => $this->getLocationFromIp(request()->ip()),
+                    'user_id' => optional($event->user)->id,
+                    'user_name' => optional($event->user)->name,
+                    'ip_address' => request()->ip(),
+                    'user_agent' => request()->header('User-Agent'),
+                    'device_type' => $this->getDeviceType(),
+                    'location' => $this->getLocationFromIp(request()->ip()),
                     'error_message' => $errorMessage,
                 ]);
             });

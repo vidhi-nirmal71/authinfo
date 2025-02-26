@@ -23,13 +23,13 @@
             Event::listen(Login::class, function ($event) {
                 if (class_exists(LoginLog::class)) {
                     LoginLog::create([
-                        'user_id'     => $event->user->id,
-                        'user_name'     => $event->user->name ?? null,
-                        'ip_address'  => request()->ip(),
-                        'user_agent'  => request()->header('User-Agent'),
-                        'device_type'      => $this->getDeviceType(),
-                        'location'    => $this->getLocationFromIp(request()->ip()),
-                        'status'      => 'success',
+                        'user_id' => $event->user->id,
+                        'user_name' => $event->user->name ?? null,
+                        'ip_address' => request()->ip(),
+                        'user_agent' => request()->header('User-Agent'),
+                        'device_type' => $this->getDeviceType(),
+                        'location' => $this->getLocationFromIp(request()->ip()),
+                        'status' => 'success',
                     ]);
                 }
             });
@@ -56,11 +56,11 @@
                 }
 
                 LoginLog::create([
-                    'user_id'      => optional($event->user)->id,
-                    'user_name'      => optional($event->user)->name,
-                    'ip_address'   => request()->ip(),
-                    'user_agent'   => request()->header('User-Agent'),
-                    'device_type'       => $this->getDeviceType(request()->header('User-Agent')),
+                    'user_id' => optional($event->user)->id,
+                    'user_name' => optional($event->user)->name,
+                    'ip_address' => request()->ip(),
+                    'user_agent' => request()->header('User-Agent'),
+                    'device_type' => $this->getDeviceType(),
                     'location'    => $this->getLocationFromIp(request()->ip()),
                     'status' => 'failed',
                     'error_message' => $errorMessage,
