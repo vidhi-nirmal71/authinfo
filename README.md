@@ -72,29 +72,35 @@ Once installed, open the following URL in your browser to check the plugin:
 
 This table provides a **searchable, paginated** view of login and logout records, including username, IP address, device type, location, and timestamps.
 
-## **FAQs**  
-## 📌 **Frequently Asked Questions (FAQ)**  
+## **FAQs**
 
-## ❓ 1. What does this package do?  
+## 1. What does this package do?  
 🚀 The **Authinfo** package logs and monitors user **login/logout** activities, capturing crucial details like **user ID, IP address, device type, timestamps**, and more. It provides admins with a **clear audit trail** of authentication events.  
 
-## 🛠️ 2. How do I install the package?  
+## 2. How do I install the package?  
 📦 Installing is simple! Run the following command in your terminal:  
 <pre><code class="language-bash">composer require itpathsolutions/authinfo</code></pre>
 
-## 🔄 3. Which Laravel versions are supported?  
+## 3. Which Laravel versions are supported?  
 This package supports **Laravel 9, 10, and 11** with **PHP 8+** compatibility.  
 
-## 📂 4. Where are login logs stored?  
-All login and logout events are stored in the **`login_logs`** table in your database.  
+## 4. Where are login logs stored?  
+📂 All login and logout events are stored in the **`login_logs`** table in your database.  
 
-## 🔍 5. How do I view login logs?  
+## 5. How do I view login logs?  
 You can access login logs via:  
 👉 `localhost:8000/login-logs`  
 
-## ⚙️ 6. Can I customize the package?  
-Yes! Publish the package’s configuration and views using:  
-<pre><code class="language-bash">php artisan vendor:publish --tag=authinfo-config</code></pre>  
+## 6. How do I update the package to the latest version?  
+Run the following command to update:
+<pre><code class="language-bash">composer update itpathsolutions/authinfo</code></pre>  
+
+## 7. Can I contribute to this package?  
+🤝 Absolutely! Contributions are welcome. See the [CONTRIBUTING](https://github.com/vidhi-nirmal71/authinfo/blob/main/CONTRIBUTING.md) guidelines for details.   
+
+## 8. Where can I get support?  
+For any support or queries, contact us via [IT Path Solutions](https://www.itpathsolutions.com/contact-us/). 
+
 
 
 ## **Contributing**  
@@ -117,5 +123,7 @@ To test this package, run the following command:
 ## **You may also find our other useful package:**  
 <a href="https://packagist.org/packages/itpathsolutions/mysqlinfo" target="_blank">MySQL Info Package 🚀</a>  
 <a href="https://packagist.org/packages/itpathsolutions/phpinfo" target="_blank">PHP Info Package 🚀</a>
+<a href="https://packagist.org/packages/itpathsolutions/role-wise-session-manager" target="_blank">Role Wise Session Manager Package 🚀</a>
+<a href="https://packagist.org/packages/itpathsolutions/chatbot" target="_blank">Chatbot Package 🚀</a>
 
 
