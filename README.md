@@ -121,9 +121,10 @@ To test this package, run the following command:
 - If you find this project helpful, please give us a ⭐ [Star](https://github.com/vidhi-nirmal71/authinfo/stargazers).  
 
 ## **You may also find our other useful package:**  
-<a href="https://packagist.org/packages/itpathsolutions/mysqlinfo" target="_blank">MySQL Info Package 🚀</a>  
-<a href="https://packagist.org/packages/itpathsolutions/phpinfo" target="_blank">PHP Info Package 🚀</a>
-<a href="https://packagist.org/packages/itpathsolutions/role-wise-session-manager" target="_blank">Role Wise Session Manager Package 🚀</a>
-<a href="https://packagist.org/packages/itpathsolutions/chatbot" target="_blank">Chatbot Package 🚀</a>
+<a href="https://packagist.org/packages/itpathsolutions/mysqlinfo" target="_blank">MySQL Info Package 🚀</a>    
+<a href="https://packagist.org/packages/itpathsolutions/phpinfo" target="_blank">PHP Info Package 🚀</a>  
+<a href="https://packagist.org/packages/itpathsolutions/role-wise-session-manager" target="_blank">Role Wise Session Manager Package 🚀</a>  
+<a href="https://packagist.org/packages/itpathsolutions/chatbot" target="_blank">Chatbot Package 🚀</a>  
+<a href="https://packagist.org/packages/itpathsolutions/redisinfo" target="_blank">Redis Info Package 🚀</a>   
 
 
